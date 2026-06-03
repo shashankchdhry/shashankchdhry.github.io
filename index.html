@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shashank Chaudhary | Software Engineer</title>
+  <meta name="description" content="Shashank Chaudhary, Software Engineer specializing in backend, distributed systems, and microservices. Java, Spring Boot, Kafka, Redis." />
+  <meta name="author" content="Shashank Chaudhary" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Shashank Chaudhary | Software Engineer" />
+  <meta property="og:description" content="Backend engineer building distributed systems at scale. Java · Spring Boot · Kafka · Microservices." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>text{fill:%23ffffff}.d{fill:%23fb7185}@media (prefers-color-scheme: light){text{fill:%2315171f}}</style><text x='50' y='55' font-family='Arial,Helvetica,sans-serif' font-size='52' font-weight='bold' text-anchor='middle' dominant-baseline='central'>SC<tspan class='d'>.</tspan></text></svg>" />
+
+  <!-- Set theme before paint to avoid a flash of the wrong colors -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) {
+          t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo">SC<span>.</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="ShashankBaseResume.pdf" class="btn btn--ghost btn--sm" download>Resume</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal">Software Engineer · Bengaluru, India</p>
+        <h1 class="hero__title reveal">
+          Hi, I'm <span class="grad">Shashank Chaudhary.</span><br />
+          I build <span class="type" id="typewriter"></span><span class="type-caret">_</span>
+        </h1>
+        <p class="hero__sub reveal">
+          Backend engineer focused on <strong>distributed systems</strong>, <strong>microservices</strong>,
+          and high-throughput pipelines. I like turning gnarly backend problems into systems that stay
+          <strong>fast</strong>, <strong>reliable</strong>, and simple under load.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#projects" class="btn btn--primary">View my work</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+        <div class="hero__socials reveal">
+          <a href="https://www.linkedin.com/in/shashankchdhry/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.99H5.67v8.35h2.67zM7 8.86a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.48v-4.58c0-2.45-1.31-3.59-3.06-3.59-1.41 0-2.04.78-2.39 1.33v-1.14h-2.66c.04.75 0 8.35 0 8.35h2.66v-4.66c0-.24.02-.48.09-.65.19-.48.63-.97 1.36-.97.96 0 1.34.73 1.34 1.8v4.48h2.66z"/></svg>
+          </a>
+          <a href="https://github.com/shashankchdhry" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.4 9.4 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.81c0 .27.18.59.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          </a>
+        </div>
+        <div class="hero__stats reveal">
+          <div class="stat">
+            <span class="stat__value"><span class="stat__num" data-count="3">0</span><span class="stat__suffix">+</span></span>
+            <span class="stat__label">Years of experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value"><span class="stat__num" data-count="2">0</span><span class="stat__suffix">M+</span></span>
+            <span class="stat__label">Users impacted</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value"><span class="stat__num" data-count="1">0</span></span>
+            <span class="stat__label">Research publication</span>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__kicker">01 - About</span>
+          <h2 class="section__title">Engineer who likes hard backend problems</h2>
+        </div>
+        <div class="about">
+          <div class="about__body reveal">
+            <p>
+              I'm a software engineer with a strong backend and distributed-systems focus. Day to day I
+              work in <strong>Java &amp; Spring Boot</strong>, designing event-driven services on
+              <strong>Kafka</strong>, taming caching bottlenecks in <strong>Redis</strong>, and building
+              APIs that hold up under real production load.
+            </p>
+            <p>
+              At <strong>Myntra</strong> I build core pieces of the fulfillment and inventory stack, from
+              zone-based order grouping to multi-warehouse stock-transfer pipelines. Before that, at
+              <strong>Zee5</strong>, I shipped subscription and plan-management microservices for a platform
+              serving 2M+ subscribers.
+            </p>
+            <p>
+              I care about the unglamorous things that make systems reliable: bounded thread pools, clean
+              rollbacks, feature gates, and observability you can actually trust.
+            </p>
+          </div>
+          <aside class="about__card reveal">
+            <h3>Quick facts</h3>
+            <ul class="factlist">
+              <li><span>Now</span> SWE @ Myntra</li>
+              <li><span>Focus</span> Distributed systems &amp; backend</li>
+              <li><span>Core</span> Java · Spring Boot · Kafka</li>
+              <li><span>Edu</span> B.Tech CSE, PES University</li>
+              <li><span>Base</span> Bengaluru, India</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__kicker">02 - Experience</span>
+          <h2 class="section__title">Where I've shipped</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="tl reveal">
+            <div class="tl__marker"></div>
+            <div class="tl__content">
+              <div class="tl__top">
+                <h3>Software Engineer</h3>
+                <span class="tl__co">Myntra</span>
+                <span class="tl__date">Dec 2024 - Present</span>
+              </div>
+              <ul class="tl__points">
+                <li>Cut <strong>Last-Mile Consolidation</strong> usage by <strong>44%</strong> with a zone-based order-grouping flow on an event-driven Kafka architecture, letting one picker collect co-located multi-item orders in a single pass.</li>
+                <li>Built core components of the <strong>MNow × Flipkart</strong> stock-transfer (STN/RSTN) pipeline handling up to <strong>20K items/consignment</strong>, with distributed item reservation, compensating rollback, and Kafka-driven pick/pack/dispatch listeners.</li>
+                <li>Designed <strong>lot-level inventory APIs</strong> for multi-lot support in the ATP service (price &amp; expiry batches), rolled out behind feature gates with zero downtime.</li>
+                <li>Resolved a <strong>Redis hot-key</strong> bottleneck (a ~4MB wildcard-pincode rule-set cache) by sharding with a deterministic hash + async parallel fetches.</li>
+                <li>Traced CPU spikes in a Tier-1 <strong>gRPC</strong> service to an unbounded CachedThreadPool; replaced it with a bounded ThreadPoolExecutor with queue/rejection metrics to stabilize p99.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl reveal">
+            <div class="tl__marker"></div>
+            <div class="tl__content">
+              <div class="tl__top">
+                <h3>Associate Software Development Engineer</h3>
+                <span class="tl__co">Zee5</span>
+                <span class="tl__date">Jan 2022 - Sep 2023</span>
+              </div>
+              <ul class="tl__points">
+                <li>Built &amp; optimized <strong>Spring Boot</strong> microservices for subscription and plan-management flows, cutting response time <strong>20%</strong> across a platform serving <strong>2M+ subscribers</strong>.</li>
+                <li>Migrated legacy outsourced systems to in-house microservices and built supporting RESTful APIs, cutting data-retrieval latency by <strong>~30%</strong>.</li>
+                <li>Designed the <strong>"Churn Arrest"</strong> feature offering targeted discounts to at-risk subscribers, lifting recurring retention by <strong>15%</strong>.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__kicker">03 - Projects &amp; Publications</span>
+          <h2 class="section__title">Things I've built &amp; published</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__top">
+              <div class="card__icon">⬇</div>
+              <div class="card__links">
+                <a href="https://github.com/shashankchdhry/bittorrent-app" target="_blank" rel="noopener" aria-label="View project on GitHub" title="View on GitHub">↗</a>
+              </div>
+            </div>
+            <h3>BitTorrent Client</h3>
+            <p>
+              A BitTorrent client built in Python with <strong>asyncio</strong> for concurrent peer
+              communication, optimizing transfers via parallel piece downloads. Handles
+              <code>.torrent</code> metadata parsing and tracker communication to coordinate many
+              peer connections efficiently.
+            </p>
+            <ul class="tags">
+              <li>Python</li><li>asyncio</li><li>Networking</li><li>Concurrency</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__top">
+              <div class="card__icon">📡</div>
+              <div class="card__links">
+                <a href="https://link.springer.com/chapter/10.1007/978-981-19-5482-5_9" target="_blank" rel="noopener" aria-label="Read paper on Springer" title="Read on Springer">↗</a>
+              </div>
+            </div>
+            <h3>Gesture Detection via IMU <span class="card__badge">Publication</span></h3>
+            <p>
+              A gesture-based Human–Machine Interface using <strong>CNNs</strong> to classify accelerometer
+              &amp; gyroscope (IMU) data. Multi-layer CNN models reached <strong>90–96%</strong> recognition
+              accuracy, deployed on low-power embedded hardware for real-time edge inference.
+              <em>Published with Springer.</em>
+            </p>
+            <ul class="tags">
+              <li>Python</li><li>CNN</li><li>Edge AI</li><li>Embedded</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__kicker">04 - Skills</span>
+          <h2 class="section__title">My toolbox</h2>
+        </div>
+
+        <div class="skills">
+          <div class="skillgroup reveal">
+            <h3>Languages</h3>
+            <ul><li>Java</li><li>C / C++</li><li>Python</li></ul>
+          </div>
+          <div class="skillgroup reveal">
+            <h3>Frameworks &amp; Libraries</h3>
+            <ul><li>Spring Boot</li><li>Spring</li><li>Hibernate</li><li>JPA</li><li>gRPC</li></ul>
+          </div>
+          <div class="skillgroup reveal">
+            <h3>Backend &amp; Architecture</h3>
+            <ul><li>Microservices</li><li>Distributed Systems</li><li>Concurrency</li><li>REST APIs</li><li>Kafka</li></ul>
+          </div>
+          <div class="skillgroup reveal">
+            <h3>Design &amp; Fundamentals</h3>
+            <ul><li>Data Structures &amp; Algorithms</li><li>OOP</li><li>System Design</li><li>Low-Level Design</li></ul>
+          </div>
+          <div class="skillgroup reveal">
+            <h3>Databases · Caching · Cloud</h3>
+            <ul><li>MySQL</li><li>PostgreSQL</li><li>Redis</li><li>AWS</li><li>GCP</li></ul>
+          </div>
+          <div class="skillgroup reveal">
+            <h3>Observability</h3>
+            <ul><li>Grafana</li><li>New Relic</li><li>Prometheus</li><li>Kibana</li></ul>
+          </div>
+          <div class="skillgroup reveal">
+            <h3>DevOps &amp; Tools</h3>
+            <ul><li>Docker</li><li>Kubernetes</li><li>Jenkins</li><li>Maven</li><li>Git</li><li>CI/CD</li><li>Airflow</li><li>JUnit</li><li>Mockito</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div class="section__head section__head--center reveal">
+          <span class="section__kicker">05 - Contact</span>
+          <h2 class="section__title">Let's build something</h2>
+          <p class="contact__lead">
+            Whether it's a backend role, a collaboration, or just a good systems problem worth chewing on,
+            I'd be glad to hear from you. Email's the best way to reach me.
+          </p>
+        </div>
+        <div class="contact__actions reveal">
+          <a href="mailto:shashankchdhry@gmail.com" class="btn btn--primary btn--lg">shashankchdhry@gmail.com</a>
+        </div>
+        <ul class="contact__links reveal">
+          <li><a href="https://github.com/shashankchdhry" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/shashankchdhry/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://leetcode.com/u/shashankchdhry/" target="_blank" rel="noopener">LeetCode</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Shashank Chaudhary</span>
+      <span class="footer__made">Crafted in Bengaluru, India</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
